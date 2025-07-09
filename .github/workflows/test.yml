@@ -28,6 +28,7 @@ jobs:
         env:
           DJANGO_SETTINGS_MODULE: api.settings
         run : |
-          python manage.py test
+          coverage run manage.py test
+          coverage report --fail-under=80
 
   
